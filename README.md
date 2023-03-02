@@ -33,11 +33,11 @@ Recently, vision transformers (ViTs) have been investigated in fine-grained visu
 
 | Datasets           | Accuracy (%) | Models | Logs |
 | ------------------ | ------------ | ------ | ---- |
-| CUB_200_2011       | 91.81        | -      | link |
-| Stanford Dogs      | 91.84        | -      | link |
-| NABirds            | 90.78        | -      | link |
-| Oxford 102 Flowers | 99.64        | -      | link |
-| Oxford-IIIT Pet    | 95.29        | -      | link |
+| CUB_200_2011       | 91.81        | -      | [link](https://github.com/mobulan/IELT/blob/main/output/logs/CUB.log) |
+| Stanford Dogs      | 91.84        | -      | [link](https://github.com/mobulan/IELT/blob/main/output/logs/Dog.log) |
+| NABirds            | 90.78        | -      | [link](https://github.com/mobulan/IELT/blob/main/output/logs/NaBirds.log) |
+| Oxford 102 Flowers | 99.64        | -      | [link](https://github.com/mobulan/IELT/blob/main/output/logs/Flowers.log) |
+| Oxford-IIIT Pet    | 95.29        | -      | [link](https://github.com/mobulan/IELT/blob/main/output/logs/Pet.log) |
 
 # Code Running
 
