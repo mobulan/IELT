@@ -25,30 +25,7 @@ Q. Xu, J. Wang, B. Jiang and B. Luo, "Fine-Grained Visual Classification Via Int
 
 # Abstract
 
-Recently, vision transformers (ViTs) have been investigated
-in fine-grained visual recognition (FGVC) and are now
-considered state of the art. However, most ViT-based works ignore
-the different learning performances of the heads in the multihead
-self-attention (MHSA) mechanism and its layers. To address
-these issues, in this paper, we propose a novel internal ensemble
-learning transformer (IELT) for FGVC. The proposed IELT
-involves three main modules: multi-head voting (MHV) module,
-cross-layer refinement (CLR) module, and dynamic selection (DS)
-module. To solve the problem of the inconsistent performances of
-multiple heads, we propose the MHV module, which considers
-all of the heads in each layer as weak learners and votes for
-tokens of discriminative regions as cross-layer feature based on
-the attention maps and spatial relationships. To effectively mine
-the cross-layer feature and suppress the noise, the CLR module
-is proposed, where the refined feature is extracted and the assist
-logits operation is developed for the final prediction. In addition,
-a newly designed DS module adjusts the token selection number
-at each layer by weighting their contributions of the refined
-feature. In this way, the idea of ensemble learning is combined
-with the ViT to improve fine-grained feature representation. The
-experiments demonstrate that our method achieves competitive
-results compared with the state of the art on five popular FGVC
-datasets.
+Recently, vision transformers (ViTs) have been investigated in fine-grained visual recognition (FGVC) and are now considered state of the art. However, most ViT-based works ignore the different learning performances of the heads in the multihead self-attention (MHSA) mechanism and its layers. To address these issues, in this paper, we propose a novel internal ensemble learning transformer (IELT) for FGVC. The proposed IELT involves three main modules: multi-head voting (MHV) module, cross-layer refinement (CLR) module, and dynamic selection (DS) module. To solve the problem of the inconsistent performances of multiple heads, we propose the MHV module, which considers all of the heads in each layer as weak learners and votes for tokens of discriminative regions as cross-layer feature based on the attention maps and spatial relationships. To effectively mine the cross-layer feature and suppress the noise, the CLR module is proposed, where the refined feature is extracted and the assist logits operation is developed for the final prediction. In addition, a newly designed DS module adjusts the token selection number at each layer by weighting their contributions of the refined feature. In this way, the idea of ensemble learning is combined with the ViT to improve fine-grained feature representation. The experiments demonstrate that our method achieves competitive results compared with the state of the art on five popular FGVC datasets.
 
 ![Network](figures/Network.jpg)!](figures/Network.jpg)
 
@@ -56,11 +33,11 @@ datasets.
 
 | Datasets           | Accuracy (%) | Models | Logs |
 | ------------------ | ------------ | ------ | ---- |
-| CUB_200_2011       | 91.81        | -      | -    |
-| Stanford Dogs      | 91.84        | -      | -    |
-| NABirds            | 90.78        | -      | -    |
-| Oxford 102 Flowers | 99.64        | -      | -    |
-| Oxford-IIIT Pet    | 95.29        | -      | -    |
+| CUB_200_2011       | 91.81        | -      | link |
+| Stanford Dogs      | 91.84        | -      | link |
+| NABirds            | 90.78        | -      | link |
+| Oxford 102 Flowers | 99.64        | -      | link |
+| Oxford-IIIT Pet    | 95.29        | -      | link |
 
 # Code Running
 

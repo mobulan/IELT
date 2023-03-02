@@ -1,0 +1,138 @@
+============================    Data Preparation    ============================
+checkpoint    None                      data_root     /DATA/meiyiming/ly/dataset/nabirds
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+dataset       nabirds                   exp_name      mean_std               
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+log_name      nabirds seed 30 11-32     log_path      ./output/mean_std/nabirds seed 30 11-32
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+model_type    ViT-B_16                  out_root      ./output               
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+pretrained    ViT-B_16.npz              set_len       None                      
+============================    Hyper Parameters    ============================
+learning_rate 0.01          loss_alpha    0.4           smooth_value  0.0         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+total_num     126           update_warm   10            vote_perhead  24          
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+weight_decay  0             
+============================  Experiment Settings   ============================
+batch_size    8             cam           1             decay_type    cosine      
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+dsm           1             epochs        50            eval_every    1           
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+img_size      448           seed          30            vote          1           
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+warm_ratio    0.0           
+============================  Distributed Settings  ============================
+device        None          fp16          1             fp16_level    O2          
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+grad_accum    1             local_rank    0             loss_scale    0           
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+max_grad_norm 1.0           ngpu          1             nprocess      4             
+============================    Model Structure     ============================
+att_dropout   0.0           classifier    token         dropout_rate  0.1         
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+hidden_size   768           mlp_dim       3072          num_heads     12          
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+num_layers    12            patches       16×16         total_params  93.77M        
+============================  Training Information  ============================
+Train samples 23904                     Test samples  24640                  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Total Batch Size  32                    Load Time     82s                    
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+Train Steps   37350                     Warm Steps    0.0                       
+============================     Start Training     ============================
+Epoch  1 /50 : Accuracy 68.493    BA 68.493    BE   1    Loss 1.2457    TA 41.74
+Epoch  2 /50 : Accuracy 81.105    BA 81.105    BE   2    Loss 0.6493    TA 75.23
+Epoch  3 /50 : Accuracy 85.071    BA 85.071    BE   3    Loss 0.4798    TA 83.96
+Epoch  4 /50 : Accuracy 86.958    BA 86.958    BE   4    Loss 0.4142    TA 88.16
+Epoch  5 /50 : Accuracy 87.774    BA 87.774    BE   5    Loss 0.3841    TA 90.45
+Epoch  6 /50 : Accuracy 88.338    BA 88.338    BE   6    Loss 0.3742    TA 92.34
+Epoch  7 /50 : Accuracy 88.842    BA 88.842    BE   7    Loss 0.3600    TA 93.46
+Epoch  8 /50 : Accuracy 89.032    BA 89.032    BE   8    Loss 0.3751    TA 94.63
+Epoch  9 /50 : Accuracy 89.187    BA 89.187    BE   9    Loss 0.3759    TA 95.43
+Epoch 10 /50 : Accuracy 89.495    BA 89.495    BE  10    Loss 0.3811    TA 96.35
+Epoch 11 /50 : Accuracy 89.625    BA 89.625    BE  11    Loss 0.3715    TA 96.60
+Epoch 12 /50 : Accuracy 89.503    BA 89.625    BE  11    Loss 0.3916    TA 97.07
+Layer Select Number:
+tensor([11.4012, 11.2715, 11.3089, 11.0297, 11.1608, 11.6578, 12.3796, 11.7701,
+        11.7080, 11.3179, 10.9945], device='cuda:0')
+Epoch 13 /50 : Accuracy 89.674    BA 89.674    BE  13    Loss 0.3919    TA 97.46
+Layer Select Number:
+tensor([11.3176, 11.1924, 11.1395, 10.8407, 10.9816, 11.7393, 12.8324, 11.9084,
+        11.8146, 11.3754, 10.8582], device='cuda:0')
+Epoch 14 /50 : Accuracy 89.893    BA 89.893    BE  14    Loss 0.3925    TA 97.81
+Epoch 15 /50 : Accuracy 89.873    BA 89.893    BE  14    Loss 0.4006    TA 98.21
+Layer Select Number:
+tensor([11.0785, 10.9243, 10.7440, 10.3737, 10.5236, 11.8442, 13.8459, 12.4452,
+        12.0929, 11.5371, 10.5905], device='cuda:0')
+Epoch 16 /50 : Accuracy 90.063    BA 90.063    BE  16    Loss 0.4084    TA 98.49
+Epoch 17 /50 : Accuracy 89.751    BA 90.063    BE  16    Loss 0.4250    TA 98.72
+Epoch 18 /50 : Accuracy 89.901    BA 90.063    BE  16    Loss 0.4381    TA 98.86
+Layer Select Number:
+tensor([10.3897, 10.3096,  9.9976,  9.5138,  9.6885, 11.9790, 15.8653, 13.6054,
+        12.5838, 11.8846, 10.1827], device='cuda:0')
+Epoch 19 /50 : Accuracy 90.270    BA 90.270    BE  19    Loss 0.4260    TA 99.03
+Epoch 20 /50 : Accuracy 90.031    BA 90.270    BE  19    Loss 0.4285    TA 99.22
+Epoch 21 /50 : Accuracy 90.112    BA 90.270    BE  19    Loss 0.4439    TA 99.32
+Epoch 22 /50 : Accuracy 90.084    BA 90.270    BE  19    Loss 0.4523    TA 99.36
+Layer Select Number:
+tensor([ 9.4801,  9.4222,  8.9546,  8.3288,  8.5868, 12.2889, 18.4285, 15.5443,
+        13.2000, 12.2730,  9.4928], device='cuda:0')
+Epoch 23 /50 : Accuracy 90.356    BA 90.356    BE  23    Loss 0.4419    TA 99.36
+Epoch 24 /50 : Accuracy 90.319    BA 90.356    BE  23    Loss 0.4514    TA 99.56
+Epoch 25 /50 : Accuracy 90.295    BA 90.356    BE  23    Loss 0.4560    TA 99.57
+Epoch 26 /50 : Accuracy 90.193    BA 90.356    BE  23    Loss 0.4640    TA 99.70
+Layer Select Number:
+tensor([ 8.5583,  8.4955,  7.9262,  7.2200,  7.5927, 12.8388, 20.7829, 17.5151,
+        13.7758, 12.5734,  8.7211], device='cuda:0')
+Epoch 27 /50 : Accuracy 90.469    BA 90.469    BE  27    Loss 0.4581    TA 99.67
+Layer Select Number:
+tensor([ 8.3675,  8.2537,  7.6840,  6.9599,  7.3861, 13.0274, 21.3466, 17.8544,
+        13.9258, 12.6520,  8.5424], device='cuda:0')
+Epoch 28 /50 : Accuracy 90.473    BA 90.473    BE  28    Loss 0.4600    TA 99.66
+Epoch 29 /50 : Accuracy 90.457    BA 90.473    BE  28    Loss 0.4675    TA 99.69
+Layer Select Number:
+tensor([ 7.9655,  7.7852,  7.2009,  6.4443,  6.9672, 13.4451, 22.3738, 18.6280,
+        14.2260, 12.7959,  8.1682], device='cuda:0')
+Epoch 30 /50 : Accuracy 90.563    BA 90.563    BE  30    Loss 0.4595    TA 99.73
+Epoch 31 /50 : Accuracy 90.534    BA 90.563    BE  30    Loss 0.4701    TA 99.75
+Layer Select Number:
+tensor([ 7.4961,  7.3483,  6.7144,  5.9650,  6.4782, 13.7137, 23.4158, 19.4496,
+        14.6403, 12.8655,  7.9132], device='cuda:0')
+Epoch 32 /50 : Accuracy 90.623    BA 90.623    BE  32    Loss 0.4633    TA 99.78
+Epoch 33 /50 : Accuracy 90.599    BA 90.623    BE  32    Loss 0.4645    TA 99.82
+Layer Select Number:
+tensor([ 7.0736,  6.9009,  6.2526,  5.5132,  6.0939, 14.1205, 24.3333, 20.2857,
+        14.9199, 12.9505,  7.5561], device='cuda:0')
+Epoch 34 /50 : Accuracy 90.680    BA 90.680    BE  34    Loss 0.4670    TA 99.83
+Layer Select Number:
+tensor([ 6.8763,  6.6973,  6.0500,  5.3134,  5.9107, 14.3179, 24.8051, 20.6350,
+        15.0430, 12.9785,  7.3729], device='cuda:0')
+Epoch 35 /50 : Accuracy 90.737    BA 90.737    BE  35    Loss 0.4691    TA 99.79
+Epoch 36 /50 : Accuracy 90.709    BA 90.737    BE  35    Loss 0.4675    TA 99.82
+Layer Select Number:
+tensor([ 6.4400,  6.3148,  5.6158,  4.8954,  5.4536, 14.6217, 25.7255, 21.4282,
+        15.2955, 13.1213,  7.0882], device='cuda:0')
+Epoch 37 /50 : Accuracy 90.786    BA 90.786    BE  37    Loss 0.4708    TA 99.80
+Epoch 38 /50 : Accuracy 90.761    BA 90.786    BE  37    Loss 0.4716    TA 99.90
+Epoch 39 /50 : Accuracy 90.701    BA 90.786    BE  37    Loss 0.4709    TA 99.87
+Epoch 40 /50 : Accuracy 90.786    BA 90.786    BE  37    Loss 0.4731    TA 99.85
+Epoch 41 /50 : Accuracy 90.753    BA 90.786    BE  37    Loss 0.4711    TA 99.85
+Epoch 42 /50 : Accuracy 90.774    BA 90.786    BE  37    Loss 0.4739    TA 99.90
+Layer Select Number:
+tensor([ 5.3117,  5.1922,  4.4918,  3.8055,  4.4489, 15.4302, 28.0280, 23.7500,
+        16.0509, 13.3616,  6.1292], device='cuda:0')
+Epoch 43 /50 : Accuracy 90.798    BA 90.798    BE  43    Loss 0.4722    TA 99.89
+Epoch 44 /50 : Accuracy 90.774    BA 90.798    BE  43    Loss 0.4731    TA 99.91
+Epoch 45 /50 : Accuracy 90.782    BA 90.798    BE  43    Loss 0.4723    TA 99.87
+Epoch 46 /50 : Accuracy 90.761    BA 90.798    BE  43    Loss 0.4724    TA 99.90
+Epoch 47 /50 : Accuracy 90.790    BA 90.798    BE  43    Loss 0.4729    TA 99.87
+Epoch 48 /50 : Accuracy 90.798    BA 90.798    BE  43    Loss 0.4728    TA 99.90
+Layer Select Number:
+tensor([ 4.3973,  4.2757,  3.5768,  2.9799,  3.6933, 16.1614, 29.8488, 25.6467,
+        16.5872, 13.5522,  5.2808], device='cuda:0')
+Epoch 49 /50 : Accuracy 90.806    BA 90.806    BE  49    Loss 0.4727    TA 99.88
+Layer Select Number:
+tensor([ 4.2666,  4.1290,  3.4523,  2.8559,  3.5615, 16.2738, 30.0498, 25.9878,
+        16.6853, 13.5368,  5.2011], device='cuda:0')
+Epoch 50 /50 : Accuracy 90.818    BA 90.818    BE  50    Loss 0.4727    TA 99.90
