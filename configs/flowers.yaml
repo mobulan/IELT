@@ -1,6 +1,6 @@
 data:
   img_size: 448
-  dataset: cub
+  dataset: flowers
   batch_size: 16
   resize: 600
   color: 0.4
