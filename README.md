@@ -67,13 +67,13 @@ python -m main.py
 #### If pytorch < 1.12.0
 
 ```bash
-python -m torch.distributed.launch --nproc_per_node {number of your gpu} main.py 
+python -m torch.distributed.launch --nproc_per_node 4 main.py 
 ```
 
 #### If pytorch >= 1.12.0
 
 ```
-torchrun --nproc_per_node {number of your gpu} main.py
+torchrun --nproc_per_node 4 main.py
 ```
 
 You need to change the number behind the `-nproc_per_node` to your number of GPUs
