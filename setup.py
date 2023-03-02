@@ -7,8 +7,8 @@ config = SetupConfig(config, cfg_file)
 config.defrost()
 
 ## Log Name and Perferences
-# config.write = True
-# config.train.checkpoint = True
+config.write = True			# comment it to disable all the log writing
+config.train.checkpoint = True		# comment it to disable saving the checkpoint
 config.misc.exp_name = f'{config.data.dataset}'
 config.misc.log_name = f'IELT'
 config.cuda_visible = '0,1,2,3'
