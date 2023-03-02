@@ -1,0 +1,14 @@
+data:
+  img_size: 448
+  dataset: cub
+  batch_size: 16
+  resize: 600
+  color: 0.4
+  data_root: '/data/datasets/fine-grained'
+model:
+  baseline_model: True
+  drop_path: 0.
+  label_smooth: 0.
+train:
+  lr: 2e-02
+  epochs: 50

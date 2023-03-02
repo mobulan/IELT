@@ -1,0 +1,26 @@
+data:
+  img_size: 448
+  dataset: cub
+  batch_size: 16
+  resize: 600
+  #  color: 0.4
+  data_root: '/data/datasets/fine-grained'
+model:
+  baseline_model: False
+  drop_path: 0.
+  label_smooth: 0.
+parameters:
+  vote_perhead: 24
+  loss_alpha: 0.4
+  total_num: 126
+  fix: True
+  dsm: True
+  cam: True
+  assess: False
+train:
+  lr: 2e-02
+  epochs: 50
+#  freeze_backbone: True
+#misc:
+#  throughput: True
+#  eval_mode: True
