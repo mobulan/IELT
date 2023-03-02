@@ -1,9 +1,9 @@
 # Fine-Grained Visual Classification via Internal Ensemble Learning Transformer
 Official Pytorch implementation of :
 
-**Article:** [Fine-Grained Visual Classification via Internal Ensemble Learning Transformer](https://ieeexplore.ieee.org/document/10042971)
+**Article:**  [Fine-Grained Visual Classification via Internal Ensemble Learning Transformer](https://ieeexplore.ieee.org/document/10042971)
 
-**Published in: ** [IEEE Transactions on Multimedia](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046) ( Early Access ）
+**Published in:**  [IEEE Transactions on Multimedia](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046) ( Early Access ）
 
 If this article is helpful to your work, please cite the following entry:
 
@@ -17,10 +17,11 @@ If this article is helpful to your work, please cite the following entry:
   number={},
   pages={1-14},
   doi={10.1109/TMM.2023.3244340}}
-  
-Q. Xu, J. Wang, B. Jiang and B. Luo, "Fine-Grained Visual Classification Via Internal Ensemble Learning Transformer," in IEEE Transactions on Multimedia, doi: 10.1109/TMM.2023.3244340.
-  
 ```
+
+or:
+
+Q. Xu, J. Wang, B. Jiang and B. Luo, "Fine-Grained Visual Classification Via Internal Ensemble Learning Transformer," in IEEE Transactions on Multimedia, doi: 10.1109/TMM.2023.3244340.
 
 # Abstract
 
@@ -61,7 +62,7 @@ datasets.
 | Oxford 102 Flowers | 99.64        | -      | -    |
 | Oxford-IIIT Pet    | 95.29        | -      | -    |
 
-# Code Running
+# Code Running
 
 ## Requirements
 
