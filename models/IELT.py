@@ -265,8 +265,8 @@ class IELTEncoder(nn.Module):
 			return key[:, 0], clr[:, 0], assess_list
 		else:
 
-			fused = torch.cat((class_token_list, clr[:, 0].unsqueeze(1)), dim=1)
-			clr[:, 0] = fused.mean(1)
+			# fused = torch.cat((class_token_list, clr[:, 0].unsqueeze(1)), dim=1)
+			# clr[:, 0] = fused.mean(1)
 			return key[:, 0], clr[:, 0]
 
 	def update_layer_select(self, layer_count):
