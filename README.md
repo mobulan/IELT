@@ -51,9 +51,9 @@ Apex (optional)
 
 ## Training
 
-1. Put the pre-trained ViT model in `pretrained/`
-2. Select a experiments setting file in `configs/`, and Modify the path of `dataset`
-3. Modify the path in `setup.py` in line 5, and you can change the log name and cuda visible by modify line 13,14
+1. Put the pre-trained ViT model in `pretrained/`, and rename it to `ViT-B_16.npz`.
+2. Select a experiments setting file in `configs/`, and Modify the path of `dataset`.
+3. Modify the path in `setup.py` in line 5, and you can change the log name and cuda visible by modify line 13,14.
 4. Running the following code according to you pytorch version:
 
 ### Single GPU
