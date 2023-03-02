@@ -1,7 +1,9 @@
 # Fine-Grained Visual Classification via Internal Ensemble Learning Transformer
 Official Pytorch implementation of :
 
-[Fine-Grained Visual Classification via Internal Ensemble Learning Transformer](https://ieeexplore.ieee.org/document/10042971)
+**Article:** [Fine-Grained Visual Classification via Internal Ensemble Learning Transformer](https://ieeexplore.ieee.org/document/10042971)
+
+**Published in: ** [IEEE Transactions on Multimedia](https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6046) ( Early Access ）
 
 If this article is helpful to your work, please cite the following entry:
 
@@ -46,3 +48,54 @@ with the ViT to improve fine-grained feature representation. The
 experiments demonstrate that our method achieves competitive
 results compared with the state of the art on five popular FGVC
 datasets.
+
+![Network](figures/Network.jpg)!](figures/Network.jpg)
+
+# Experiments Results
+
+| Datasets           | Accuracy (%) | Models | Logs |
+| ------------------ | ------------ | ------ | ---- |
+| CUB_200_2011       | 91.81        | -      | -    |
+| Stanford Dogs      | 91.84        | -      | -    |
+| NABirds            | 90.78        | -      | -    |
+| Oxford 102 Flowers | 99.64        | -      | -    |
+| Oxford-IIIT Pet    | 95.29        | -      | -    |
+
+# Code Running
+
+## Requirements
+
+python     >= 3.9
+
+pytorch	>= 1.8.1
+
+Apex (optional)
+
+## Training
+
+1. Put the pre-trained ViT model in `pretrained/`
+2. Select a experiments setting file in `configs/`, and Modify the path of `dataset`
+3. Modify the path in `setup.py` in line 5, and you can change the log name and cuda visible by modify line 13,14
+4. Running the following code according to you pytorch version:
+
+### Single GPU
+
+```bash
+python -m main.py
+```
+
+### Multiple GPUs
+
+#### If pytorch < 1.12.0
+
+```bash
+python -m torch.distributed.launch --nproc_per_node {number of your gpu} main.py 
+```
+
+#### If pytorch >= 1.12.0
+
+```
+torchrun --nproc_per_node {number of your gpu} main.py
+```
+
+You need to change the number behind the `-nproc_per_node` to your number of GPUs
