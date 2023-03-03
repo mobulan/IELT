@@ -37,7 +37,7 @@ class InterEnsembleLearningTransformer(nn.Module):
 			complement_logits = self.head(xc)
 			probability = self.softmax(complement_logits)
 			weight = self.head.weight
-			assist_logit = probability * (weight.mean(-1))
+			assist_logit = probability * (weight.sum(-1))
 			part_logits = self.head(x) + assist_logit
 		else:
 			part_logits = self.head(x)
