@@ -78,10 +78,10 @@ def LocateDatasets(config=None):
 	address = ip.split('.')[3]
 	data_root = config.data.data_root
 	batch_size = config.data.batch_size
-	if address == '210.45.215.179':
+	if ip == '210.45.215.179':
 		data_root = '/DATA/meiyiming/ly/dataset'
 		batch_size = config.data.batch_size // 2
-	elif address == '210.45.215.197':
+	elif ip == '210.45.215.197':
 		data_root = '/DATA/linjing/ly/dataset'
 		batch_size = config.data.batch_size // 2
 	# elif address == '65' or address == '199' or address == '100':

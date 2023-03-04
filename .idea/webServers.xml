@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cf400617-6de1-4048-b1e7-0753b8d7b245" name="197IELT">
+        <fileTransfer rootFolder="/DATA/linjing/Mobulan/IELT/" accessType="SFTP" host="210.45.215.197" port="22" sshConfigId="197142e1-c239-4f2d-8146-e0d0fa7da10b" sshConfig="197">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

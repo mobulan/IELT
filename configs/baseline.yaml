@@ -10,5 +10,5 @@ model:
   drop_path: 0.
   label_smooth: 0.
 train:
-  lr: 2e-02
+  lr: 32e-02
   epochs: 50

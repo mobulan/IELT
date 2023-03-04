@@ -18,7 +18,7 @@ parameters:
   cam: True
   assess: False
 train:
-  lr: 2e-02
+  lr: 32e-02
   epochs: 50
 #  freeze_backbone: True
 #misc:
