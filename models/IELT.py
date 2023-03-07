@@ -86,11 +86,8 @@ class InterEnsembleLearningTransformer(nn.Module):
 			else:
 				ntok_new = posemb_new.size(1)
 
-				if self.classifier == "token":
-					posemb_tok, posemb_grid = posemb[:, :1], posemb[0, 1:]
-					ntok_new -= 1
-				else:
-					posemb_tok, posemb_grid = posemb[:, :0], posemb[0]
+				posemb_tok, posemb_grid = posemb[:, :1], posemb[0, 1:]
+				ntok_new -= 1
 
 				gs_old = int(np.sqrt(len(posemb_grid)))
 				gs_new = int(np.sqrt(ntok_new))

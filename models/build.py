@@ -29,7 +29,7 @@ def build_models(config, num_classes):
 		                                         config.parameters.update_warm, config.parameters.vote_perhead,
 		                                         config.parameters.total_num,
 		                                         config.parameters.assess)
-	model.load_from(config.model.pretrained)
+	model.load_from(np.load(config.model.pretrained))
 	return model
 
 
