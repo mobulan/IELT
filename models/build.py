@@ -2,7 +2,7 @@ import os
 
 import timm
 import torch
-
+import numpy as np
 from models import vit
 from models.IELT import InterEnsembleLearningTransformer
 
