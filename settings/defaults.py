@@ -44,7 +44,7 @@ _C.model.parameters = 0
 # -----------------------------------------------------------------------------
 _C.parameters = CN()
 _C.parameters.vote_perhead = 24
-_C.parameters.update_warm = 500
+_C.parameters.update_warm = 10
 _C.parameters.loss_alpha = 0.4
 _C.parameters.total_num = 126
 _C.parameters.fix = True
