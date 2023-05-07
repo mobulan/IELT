@@ -20,6 +20,7 @@ def build_models(config, num_classes):
 	if config.model.baseline_model:
 		model = baseline_models(config, num_classes)
 		load_pretrained(config, model)
+		return model
 	else:
 		structure = backbone[config.model.name]
 		model = InterEnsembleLearningTransformer(structure, config.data.img_size, num_classes, config.data.dataset,
