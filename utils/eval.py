@@ -73,17 +73,23 @@ def save_preds(preds, y, all_preds=None, all_label=None, ):
 	return all_preds, all_label
 
 
-def load_checkpoint(config, model, optimizer, scheduler, loss_scaler, log):
-	log.info(f"--------------- Resuming form {config.model.resume} ---------------")
+def load_checkpoint(config, model, optimizer=None, scheduler=None, loss_scaler=None, log=None):
+	try:
+		log.info(f"--------------- Resuming form {config.model.resume} ---------------")
+	except:
+		pass
 	checkpoint = torch.load(config.model.resume, map_location='cpu')
 	msg = model.load_state_dict(checkpoint['model'], strict=False)
-	log.info(msg)
+	try:
+		log.info(msg)
+	except:
+		pass
 	max_accuracy = 0.0
-	if not config.eval_mode and 'optimizer' in checkpoint and 'lr_scheduler' in checkpoint and 'epoch' in checkpoint:
+	if not config.misc.eval_mode and 'optimizer' in checkpoint and 'lr_scheduler' in checkpoint and 'epoch' in checkpoint:
 		optimizer.load_state_dict(checkpoint['optimizer'])
 		scheduler.load_state_dict(checkpoint['lr_scheduler'])
 		config.defrost()
-		config.TRAIN.START_EPOCH = checkpoint['epoch'] + 1
+		config.train.start_epoch = checkpoint['epoch'] + 1
 		config.freeze()
 		if 'scaler' in checkpoint:
 			loss_scaler.load_state_dict(checkpoint['scaler'])

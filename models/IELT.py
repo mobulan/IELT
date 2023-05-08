@@ -25,6 +25,7 @@ class InterEnsembleLearningTransformer(nn.Module):
 		self.head = Linear(config.hidden_size, num_classes)
 		self.softmax = Softmax(dim=-1)
 
+
 	def forward(self, x, labels=None):
 		test_mode = False if labels is not None else True
 		x = self.embeddings(x)
@@ -42,11 +43,11 @@ class InterEnsembleLearningTransformer(nn.Module):
 		else:
 			part_logits = self.head(x)
 
-		if test_mode:
-			return part_logits
-
-		elif self.assess:
+		if self.assess:
 			return part_logits, assess_list
+
+		elif test_mode:
+			return part_logits
 
 		else:
 			if self.smooth_value == 0:
