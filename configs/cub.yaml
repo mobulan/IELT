@@ -1,7 +1,7 @@
 data:
   img_size: 448
   dataset: cub
-  batch_size: 16
+  batch_size: 14
   resize: 600
   color: 0.4
   data_root: '/data/datasets/fine-grained'
@@ -18,7 +18,7 @@ parameters:
   cam: True
   assess: False
 train:
-  lr: 32e-02
+  lr: 0.0025
   epochs: 50
 #  freeze_backbone: True
 #misc:
